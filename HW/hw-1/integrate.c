@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 double integrate(double (*f)(double),double a,double b) {
-    double step = 0.001,sum=0.0;
+    double step=0.001,sum=0.0;
     for(double x=a;x<b;x+=step){
         sum+=f(x)*step;
     }
