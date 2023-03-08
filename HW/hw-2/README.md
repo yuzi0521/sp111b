@@ -1,7 +1,7 @@
 # Dowhile 
 
 - 新增DOWHILE( );
-    ```
+    ```C
     //do STMT while (E)
     void DOWHILE(){
         int dowhileBegin = nextLabel();
@@ -20,7 +20,7 @@
     }
     ```
 - 在STMT中增加，假如下一位讀取到為"do"則進入DOWHILE( );
-    ```
+    ```C
     // STMT = WHILE | BLOCK | ASSIGN
     void STMT() {
     if (isNext("while"))
