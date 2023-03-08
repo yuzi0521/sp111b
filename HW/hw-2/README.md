@@ -12,8 +12,8 @@
         skip("while");
         skip("(");
         int e = E();
-        emit("if T%d goto L%d\n", e, dowhileBegin); \\當符合T%d的條件時跳回dowhileBegin(L0)
-        emit("if not T%d goto L%d\n", e, dowhileEnd); \\不符合時則跳至dowhileEnd(L1)結束程式
+        emit("if T%d goto L%d\n", e, dowhileBegin); //當符合T%d的條件時跳回dowhileBegin(L0)
+        emit("if not T%d goto L%d\n", e, dowhileEnd); //不符合時則跳至dowhileEnd(L1)結束程式
         skip(")");
         skip(";");
         emit("(L%d)\n", dowhileEnd);
