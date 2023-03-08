@@ -1,7 +1,7 @@
 # Dowhile 
 
-###### 新增DOWHILE();
-```
+- 新增DOWHILE()
+    ```
     //do STMT while (E)
     void DOWHILE(){
         int dowhileBegin = nextLabel();
@@ -18,9 +18,9 @@
         skip(";");
         emit("(L%d)\n", dowhileEnd);
     }
-```
-###### 在STMT中增加，假如下一位讀取到為"do"則進入DOWHILE();
-```
+    ```
+- 在STMT中增加，假如下一位讀取到為"do"則進入DOWHILE()
+    ```
     // STMT = WHILE | BLOCK | ASSIGN
     void STMT() {
     if (isNext("while"))
@@ -34,10 +34,11 @@
     else
         ASSIGN();
     }
-```
+    ```
 
 ## 執行結果
-    1. dowhile.c
+
+1. dowhile.c
    
     ```
     yuzi@LAPTOP-BL9QSBJ6:/mnt/c/Users/user/Desktop/網頁設計/sp111b/HW/hw-2/03a-compiler$ make
@@ -107,7 +108,7 @@
     (L1)
     ```
     
-    2. dowhile2.c
+2. dowhile2.c
     
     ```
     yuzi@LAPTOP-BL9QSBJ6:/mnt/c/Users/user/Desktop/網頁設計/sp111b/HW/hw-2/03a-compiler$ ./compiler test/dowhile2.c
