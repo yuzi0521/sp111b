@@ -5,6 +5,41 @@
     此專案由同學的sum函式庫專案參考學習並加以延伸的，
     除去sum部分其餘 div、mult、sub 均為延伸原創的
 
+## 運作原理(以sum為例)
+### 創建sum.h
+
+此主要為定義函式庫
+```c
+#ifndef SUM_H_INCLUDED // 條件預處理指令，判斷SUM_H_INCLUDED是否被定義
+#define SUM_H_INCLUDED // 定義SUM_H_INCLUDED，並防止頭文件的内容被重復包含
+
+#include <stdio.h> //告訴编譯器編譯過程中將stdio.h頭文件的内容包含在當前文件中
+
+int sum(int a ,int b); //函數聲明
+
+#endif //條件預處理指令的结束標記
+```
+### 創建sum.c
+
+寫其功能(就是function)
+```c
+//加法
+#include "sum.h"
+
+int sum(int a,int b)
+{
+    return a+b;
+}
+```
+### 創建Makefile
+
+- 用於構建並指定了如何编譯和運行這個程式,將main.c、sum.c、sub.c、mult.c、div.c進行連結並輸出成main
+- 執行main
+```Makefile
+output: main.c
+	@gcc -o main main.c sum.c sub.c mult.c div.c 
+	@./main
+```
 ## demo
 ### 測試程式碼
 
