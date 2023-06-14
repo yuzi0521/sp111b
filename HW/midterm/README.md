@@ -1,0 +1,50 @@
+## 此為製作加減乘除的函式庫
+
+## 來源聲明
+
+    此專案由同學的sum函式庫專案參考學習並加以延伸的，
+    除去sum部分其餘 div、mult、sub 均為延伸原創的
+
+## demo
+### 測試程式碼
+
+    ``` C
+    #include "sum.h"
+    #include "sub.h"
+    #include "mult.h"
+    #include "div.h"
+
+    int main(void)
+    {
+        int a=20;
+        int b=17;
+        printf("%d\n",sum(a,b));
+        printf("%d\n",sub(a,b));
+        printf("%d\n",mult(a,b));
+        printf("%.2f\n",div(a,b));
+
+        printf("========test 0========\n");
+
+        int c=20;
+        int d=0;
+        printf("%d\n",sum(c,d));
+        printf("%d\n",sub(c,d));
+        printf("%d\n",mult(c,d));
+        printf("%.2f\n",div(c,d));
+    }
+    ```
+### 執行結果
+    ```
+    yuzi@LAPTOP-BL9QSBJ6:/mnt/c/Users/user/Desktop/網頁設計/yuzi/sp111b/HW/midterm$ gcc -o main main.c sum.c sub.c mult.c div.c
+    yuzi@LAPTOP-BL9QSBJ6:/mnt/c/Users/user/Desktop/網頁設計/yuzi/sp111b/HW/midterm$ ./main
+    37
+    3
+    340
+    1.18
+    ========test 0========
+    20
+    20
+    0
+    please enter again ,your number can't be zero
+    0.00
+    ```
